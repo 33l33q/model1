@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="EUC-KR">
+		<title>1210 수정판</title>
+			<script language="javascript">
+			function boardWriteCheck(){
+			alert("boardWriteCheck() 함수 진입 >> ");
+			
+			if( !document.getElementById("lsubject").value )
+				{
+					alert("[제목]을 적어주세요");
+					document.getElementById("lsubject").focus();
+					return;
+				}
+				if( !document.getElementById("lname").value){
+					alert("[이름]을 적어주세요");
+					document.getElementById("lname").focus();
+					return;
+				}
+				
+				if( !document.getElementById("lpw").value){
+					alert("[비밀번호]을 적어주세요");
+					document.getElementById("lpw").focus();
+					return;
+				}
+				
+				if( !document.getElementById("lmemo").value){
+					alert("[내용]을 적어주세요");
+					document.getElementById("lmemo").focus();
+					return;
+				}
+			
+				
+				document.boardWrite.action =
+				"/babyweb/board/LdbHelloBoardInsert.jsp";
+				document.boardWrite.submit();
+			}
+			
+			
+	</script>
+	</head>
+
+	<body>
+		<form name = "boardWrite" method = "post">
+		<table border = "1" align = "center">
+		<tr>
+			<td colspan = "2" align = "center">ISUD게시판 </td>
+		</tr>
+		<tr>
+			<td align = "center">글번호</td>
+			<td><input type = "text" name = "lno" id = "lno" size ="20"
+				disabled></td>
+		</tr>
+		<tr>
+			<td align = "center">제목</td>
+			<td><input type = "text" name = "lsubject" id = "lsubject" size ="53"></td>
+		</tr>
+		<tr>
+			<td align = "center">이름</td>
+			<td><input type = "text" name = "lname" id = "lname" size ="53"></td>
+		</tr>
+		<tr>
+			<td align = "center">비밀번호</td>
+			<td><input type = "text" name = "lpw" id = "lpw" size ="20"></td>
+		</tr>
+		<tr>
+			<td align = "center">입력일</td>
+			<td><input type = "text" name = "linsertdate" size ="20"
+				disabled></td>
+		</tr>
+		<tr>
+			<td align = "center">수정일</td>
+			<td><input type = "text" name = "lupdatedate" size ="20"
+				disabled></td>
+		</tr>
+		<tr>
+			<td align = "center">내용</td>
+			<td><textarea name = "lmemo" id = "lmemo" cols ="50"
+				rows = "10 "></textarea>
+		</tr>
+		<tr>
+			<td colspan = "2" align = "center">
+				<input type = "hidden" name = "ISUD_TYPE" value = "I">
+				<input type = "button" value = "보내기"
+				onclick = "boardWriteCheck()">
+				<input type = "reset" value = "다시">
+			</td>
+		</tr>
+		</table>
+		</form>
+	
+	</body>
+</html>

@@ -1,0 +1,66 @@
+<!-- 1205 -->
+<!DOCTYPE html> 
+	<html>
+			<head>
+			<meta charset="EUC-KR"> 
+			<title>집에가자</title> 
+			<script type="text/javascript"> <!-- 이 구문을 보고 따로 읽음 -->
+				 <!-- UCMA 3 규칙을 토대로 읽음 -->
+							
+				 function loginCheck(){
+			
+				 	if(!document.getElementById("idVal").value){
+				 		alert("[아이디]를 입력하세요");
+				 		document.getElementById("idVal").focus();
+				 		return; 
+				 	}
+				 	
+				 	if(!document.getElementById("pwVal").value){
+				 		alert("[패스워드]를 입력하세요");
+				 		document.getElementById("pwVal").focus();
+				 		return;
+				 	}
+	
+				 	document.loginForm.action="/babyweb/login.jsp";
+					alert(document.loginForm.action);
+				 	document.loginForm.submit();
+				 	
+				 } 
+				 
+			</script>
+			
+		</head>
+	<body>
+
+		<form name = "loginForm"
+			  id ="loginForm"
+			  method = "GET">
+
+		<table border = "1" align = "center">
+			<tr>
+				<td colspan ="2" align ="center">
+				로그인
+				</td>
+			</tr>
+			<tr>
+				<td align = "center"> 아이디 </td>
+				<td>
+					<input type = "text" name = "id" id = "idVal">
+				</td>
+			</tr>
+			<tr>
+				<td align = "center" >패스워드 </td>
+				<td><input type ="password" name = "pw" id = "pwVal">
+				</td>
+			</tr>
+			<tr>
+				<td colspan = "2" align ="center">
+					<input type = "button" value = "보내기" onclick ="loginCheck()">
+					<input type = "reset" value = "다시" >
+				</td>
+			</tr>
+		</table>
+			<p align = "center"><a href = "/babyweb/member.html">회원가입</a>	
+		</form>
+	</body>
+</html> 

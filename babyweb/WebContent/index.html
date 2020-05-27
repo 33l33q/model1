@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>		
+		<title>홈페이지 기초</title>
+	</head>
+	<!-- 
+		CSS style 속성값
+		background : colr : 
+					16진수 색 : #RRGGBB
+					           RR : red, GG : green, BB : blue
+					           16진수 00 ~ ff 로 표현					           
+					           #00000 0 : rgb(0,0,0) : 검정
+					           #ff0000 : rgb(255,0,0) : 적색
+					           #ffffff : rgb(255,255,255) : 흰색
+					RGB 색 : rgb(red, green, blue)
+					               각 색을 0 ~ 255 로 표현  
+		display : table : 테이블 형태로 출력
+		width : 적용 엘리먼트의 가로 크기 : px 또는 % 단위의 숫자로 표시
+		height : 적용 엘리먼트의 세로 크기 : px 또는 % 단위의 숫자로 표시
+		text-align : center : 적용 엘리먼트의 데이터를 가로의 중앙으로 배치한다.
+		vertical-align : middle : 적용 엘리먼트의 데이터를 세로의 중앙으로 배치한다.
+	 -->
+	<!-- 		
+		body 엘리먼트에 배경색 속성 정하기  
+		bgcolor="lightgrey" 
+	-->
+	<body bgcolor="white">
+	<section>
+		<!-- 헤더  -->
+		<!-- 
+			inline style
+			<태그 style="속성1: 속성값; 속성2: 속성값;"
+		 -->
+		<header style="display: table; /* 표시형태 */
+		               width: 100%;/* 너비 */
+		               height: 50px;/* 높이 */
+		               background: #798fa8;/* 배경색  */
+		               color: white;/* 글자색 */
+		               text-align: center;/* 글자의 수평위치 */
+		               vertical-align: middle; /* 글자의 수직위치 */ ">
+			<h1>홈페이지의 기초를 만들어 보자~!</h1>
+		</header>
+		<!-- 본문  -->
+		<section style = "text-align: center;" >
+			<h2>본문의 제목을 작성해보자~!</h2>
+			<a href="/babyweb/html5.html">로그인</a>
+			<a href="/babyweb/member.html">회원가입</a>
+			<!--  http://localhost:8088/babyWeb/borad/helloBoard.html -->
+			<a href="../../babyweb/board/LdbHelloBoard.html">게시판</a><br>
+			<div>
+				<p>
+				 <iframe width="560" height="315" src="https://www.youtube.com/embed/NPCiWVLLwbA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</p>	
+			</div>
+		</section>
+		<!-- 푸터  -->
+		<footer style="display: table;
+		               width: 100%;
+		               height: 40px;
+		               background: #798fa8;
+		               color: white;
+		               text-align: center;
+		               vertical-align: middle;">
+			<h3>여기까지 수고하셨습니다.</h3>
+		</footer>
+	</section>			
+	</body>
+</html>
+
+

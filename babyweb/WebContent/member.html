@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<meta charset="EUC-KR">
+			<title>회원</title>
+			<!--  디바이스에 최적화된 크기로 출력 -->
+	        <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+			<script type = "text/javascript">
+			
+				$(document).ready(function(){
+					
+					$("#I_member").click(function(){
+						
+						if(! document.getElementById("lname").value ){
+							alert("이름을 입력하세요.");
+							$("#lname").focus();
+							return false;
+						}
+						
+						if(!document.getElementById("lid").value){
+							alert("아이디를 입력하세요.");
+							$("#lid").focus();
+							return false;
+						}
+						
+						if(!document.getElementById("lpw").value){
+							alert("비밀번호를 입력하세요.");
+							$("#lpw").focus();
+							return false;
+						}
+						
+					});
+					
+					
+					$("#U_member").click(function(){
+						
+						if(!document.getElementById("lmem").value){
+							alert("회원번호를 입력하세요.");
+							$("#lmem").focus();
+							return false;
+						}
+						
+						if(!document.getElementById("lpw").value){
+							alert("비밀번호를 입력하세요.");
+							$("#lpw").focus();
+							return false;
+						}
+						
+					});
+					
+					
+					$("#D_member").click(function(){
+						
+						if(!document.getElementById("lmem").value){
+							alert("회원번호를 입력하세요.");
+							$("#lmem").focus();
+							return false;
+						}
+						
+						if(!document.getElementById("lpw").value){
+							alert("비밀번호를 입력하세요.");
+							$("#lpw").focus();
+							return false;
+						}
+						
+					});
+				
+				});
+
+				function checkAction(actionName){
+				
+					alert("checkAction 함수 진입 >>> " + actionName);
+					
+					if('I' == actionName){ 
+						document.memberForm.action="/babyweb/insertLdbMember.jsp";
+						alert(document.memberForm.action);
+					}
+					if('S'== actionName){
+						document.memberForm.action = "/babyweb/selectLdbMember.jsp";
+						alert(document.memberForm.action);
+					}
+					
+					if('SS'== actionName){
+						document.memberForm.action = "/babyweb/searchLdbMember.jsp";
+						alert(document.memberForm.action);
+					}
+					
+					if('U' == actionName){
+						document.memberForm.action = "/babyweb/updateLdbMember.jsp";
+						alert(document.memberForm.action);
+					}
+					
+					if('D' == actionName){
+						document.memberForm.action ="/babyweb/deleteLdbMember.jsp";
+						alert(document.memberForm.action);
+					}
+					
+					document.memberForm.submit();
+				}
+			
+			</script>
+		</head>
+		<body>
+			<form name = "memberForm" method = "GET">
+				<table border = "1" align = "center">
+					<tr>
+						<td colspan = "2" align = "center">
+						회원정보
+						</td>
+					</tr>
+					<tr>
+						<td width = "100" align = "center">회원번호</td>
+						<td width = "250">
+							&nbsp;<input type="text" name = lmem placeholder ="* 수정/ 삭제/ 조회 시 회원번호 사용"><br>
+							<font size = "2"></font>
+						</td>
+					</tr>
+					<tr>
+						<!--  체번로직은 daoImpl에다가 넣는거 -->
+						<td align="center">한글이름</td>
+						<td>&nbsp;<input type="text" name ="lname" ></td>
+					</tr>
+					<tr>
+						<td align="center">아이디</td>
+						<td>&nbsp;<input type="text" name ="lid"></td>
+					</tr>
+					<tr>
+						<td align="center">비밀번호</td>
+						<td>&nbsp;<input type="password" name ="lpw"></td>
+					</tr>
+					<tr>
+						<td align="center">전화번호</td>
+						<td>&nbsp;<input type="text" name ="lhp" placeholder="숫자만 입력"></td>
+					</tr>
+					<tr>
+						<td align="center">생년월일</td>
+						<td>&nbsp;<input type="text" name ="lbirth" placeholder="6자리로 등록"></td>
+					</tr>
+					<tr>
+						<td align="center">메일주소</td>
+						<td>&nbsp;<input type="text" name ="lemail"></td>
+					</tr>
+					<tr>
+						<td align="center">우편번호</td>
+						<td>&nbsp;<input type="text" name ="lpostno"></td>
+					</tr>
+					<tr>
+						<td align="center">주소</td>
+						<td>&nbsp;<input type="text" name ="laddr"></td>
+					</tr>
+					<tr>
+						<td colspan = "2" align = "center">
+							<input type = "button" value = "입력" id="I_member" onclick = "checkAction('I');">
+							<input type="button" value="조회" onclick="checkAction('S');">
+							<input type="button" value="검색" onclick="checkAction('SS');">
+							<input type="button" value="수정" id="U_member" onclick="checkAction('U');">
+							<input type="button" value="삭제" id="D_member" onclick="checkAction('D');">
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<input type="reset" value="다시">
+				</table>
+			</form>
+		</body>
+	</html>
+	
