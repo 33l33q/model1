@@ -50,6 +50,12 @@
 					alert(' D >>> : ' + document.boardForm.action);				
 				}
 				
+				if ('H' == strValue){
+					document.boardForm.ISUD_TYPE.value = "D";
+					document.boardForm.action = "/babyweb/index.html"
+					alert(' D >>> : ' + document.boardForm.action);				
+				}
+				
 				document.boardForm.submit();
 			}
 		</script>
@@ -63,8 +69,8 @@
 	
 %>
 	<center>
-			<form name="boardForm" methdo="POST">
-		<table border="1" align="center">
+			<form name="boardForm" method="POST">
+		<table border="1" align="center" width = "1000px">
 			<thead>
 			<tr>
 				<td colspan="10" align="center">
@@ -84,7 +90,6 @@
 				<td class="tt">글번호</td>
 				<td class="tt">제목</td>
 				<td class="tt">이름</td>
-				<td class="tt">비밀번호</td>
 				<td class="tt">내용</td>
 				<td class="tt">입력일</td>
 				<td class="tt">수정일</td>			
@@ -106,7 +111,6 @@
 					<td align="center"><%= lbVo.getLno() %></td>
 					<td align="center"><%= lbVo.getLsubject() %></td>
 					<td align="center"><%= lbVo.getLname() %></td>
-					<td align="center"><%= lbVo.getLpw() %></td>	
 					<td align="center"><%= lbVo.getLmemo() %></td>		
 					<td align="center"><%= lbVo.getLinsertdate() %></td>
 					<td align="center"><%= lbVo.getLupdatedate() %></td>			
@@ -117,7 +121,11 @@
 %>
 				<tr>
 					<td colspan="10" align="right">	
-						<input type="hidden" name="ISUD_TYPE">												
+						<input type="hidden" name="ISUD_TYPE">		
+						
+						<input type="button" value="홈페이지" onclick="boardFunction('H')">
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+																
 						<input type="button" value="글쓰기" onclick="boardFunction('I')">
 						<input type="button" value="글목록" onclick="boardFunction('SALL')">
 						<input type="button" value="글수정" onclick="boardFunction('U')">

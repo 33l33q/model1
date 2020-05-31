@@ -4,6 +4,14 @@
 		<meta charset="EUC-KR">
 		<title>1210 수정판</title>
 			<script language="javascript">
+			
+			function boardSelectCheck(){
+				
+				document.boardWrite.action =
+				"/babyweb/board/LdbHelloBoardSelect.jsp";
+				document.boardWrite.submit();
+				
+			}
 			function boardWriteCheck(){
 			alert("boardWriteCheck() 함수 진입 >> ");
 			
@@ -35,6 +43,7 @@
 				document.boardWrite.action =
 				"/babyweb/board/LdbHelloBoardInsert.jsp";
 				document.boardWrite.submit();
+
 			}
 			
 			
@@ -82,9 +91,10 @@
 		<tr>
 			<td colspan = "2" align = "center">
 				<input type = "hidden" name = "ISUD_TYPE" value = "I">
-				<input type = "button" value = "보내기"
-				onclick = "boardWriteCheck()">
+				<input type = "button" value = "보내기" onclick = "boardWriteCheck()">
 				<input type = "reset" value = "다시">
+				&nbsp;&nbsp;&nbsp;&nbsp;				
+				<input type = "button" value = "목록" onclick = "boardSelectCheck()">
 			</td>
 		</tr>
 		</table>
