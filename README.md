@@ -9,6 +9,6 @@
 > - 제작 기간 : 30시간
 
 
-## 2. 개발환경 : Eclipse Neon3, jdk 1.8, oracle 11g R2, apach-tomcat 8.0, window10
+## 2. 개발환경 : Eclipse Neon3, jdk 1.8, oracle 11g R2, apach-tomcat 8.0, window10, HMTL5, jsp
 
 ## 3. 실행화면
