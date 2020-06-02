@@ -12,3 +12,25 @@
 ## 2. 개발환경 : Eclipse Neon3, jdk 1.8, oracle 11g R2, apach-tomcat 8.0, window10, HMTL5, jsp
 
 ## 3. 실행화면
+
+- 1-1 로그인
+![image](https://user-images.githubusercontent.com/62315622/83349680-bade8a80-a371-11ea-8944-4d4a4402d061.png)
+
+- 1-2 회원가입
+![image](https://user-images.githubusercontent.com/62315622/83349616-32f88080-a371-11ea-8faa-b54e521707b6.png)
+ 
+- 1-3 홈페이지
+![image](https://user-images.githubusercontent.com/62315622/83349627-4d325e80-a371-11ea-8666-48daebaf86fc.png)
+
+- 2-1 게시판(전체 글 보기)
+![image](https://user-images.githubusercontent.com/62315622/83349738-190b6d80-a372-11ea-8080-aa13d090c23e.png)
+
+- 2-2 글 작성하기
+![image](https://user-images.githubusercontent.com/62315622/83349748-37716900-a372-11ea-9039-fdab7ef6df61.png)
+
+- 2-3 글 수정하기(상세페이지)
+![image](https://user-images.githubusercontent.com/62315622/83349773-5a038200-a372-11ea-996e-8c463fabf2f6.png)
+
+- 2-3  글 삭제하기(상세페이지)
+![image](https://user-images.githubusercontent.com/62315622/83349795-756e8d00-a372-11ea-8eb7-93898863e34d.png)
+
